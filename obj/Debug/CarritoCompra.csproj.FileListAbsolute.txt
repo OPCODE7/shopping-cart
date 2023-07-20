@@ -1,0 +1,10 @@
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.csproj.AssemblyReference.cache
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.FrmProductos.resources
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.Properties.Resources.resources
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.csproj.GenerateResource.cache
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.csproj.CoreCompileInputs.cache
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\bin\Debug\CarritoCompra.exe.config
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\bin\Debug\CarritoCompra.exe
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\bin\Debug\CarritoCompra.pdb
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.exe
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.pdb

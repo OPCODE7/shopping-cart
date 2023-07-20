@@ -16,5 +16,10 @@ namespace CarritoCompra
         {
             InitializeComponent();
         }
+
+        private void FrmProductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
