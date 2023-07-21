@@ -8,5 +8,8 @@ namespace CarritoCompra
 {
     internal class User
     {
+        //Propiedades del usuario logueado
+        public static string IDUSER;
+        public static string USERNAME;
     }
 }

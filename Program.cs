@@ -16,7 +16,7 @@ namespace CarritoCompra
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmProductos());
+            Application.Run(new FrmLogin());
         }
     }
 }
