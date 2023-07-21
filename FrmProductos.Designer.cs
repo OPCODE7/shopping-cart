@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblShoppingCart = new System.Windows.Forms.Label();
+            this.ID_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +53,7 @@
             this.DgvProductos.AllowUserToAddRows = false;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_PRODUCTO,
             this.NombreProducto,
             this.DescripcionProducto,
             this.PrecioProducto,
@@ -64,6 +66,7 @@
             this.DgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProductos.Size = new System.Drawing.Size(983, 462);
             this.DgvProductos.TabIndex = 0;
+            this.DgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductos_CellDoubleClick);
             // 
             // label1
             // 
@@ -145,6 +148,13 @@
             this.LblShoppingCart.TabIndex = 8;
             this.LblShoppingCart.Text = "0";
             // 
+            // ID_PRODUCTO
+            // 
+            this.ID_PRODUCTO.HeaderText = "ID";
+            this.ID_PRODUCTO.Name = "ID_PRODUCTO";
+            this.ID_PRODUCTO.ReadOnly = true;
+            this.ID_PRODUCTO.Width = 80;
+            // 
             // NombreProducto
             // 
             this.NombreProducto.HeaderText = "Nombre Producto";
@@ -217,11 +227,12 @@
         private System.Windows.Forms.ComboBox CmbBrand;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label LblShoppingCart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarcaProducto;
         private System.Windows.Forms.DataGridViewImageColumn Detalle;
+        public System.Windows.Forms.Label LblShoppingCart;
     }
 }

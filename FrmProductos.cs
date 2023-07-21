@@ -54,7 +54,7 @@ namespace CarritoCompra
         {
             DataTable products = new DataTable();
             string data;
-            data = "A.NOMBRE_PRODUCTO,A.DESCRIPCION_PRODUCTO, A.PRECIO_PRODUCTO,B.DESCRIPCION AS MARCA FROM PRODUCTOS A INNER JOIN MARCAS B ON(A.ID_MARCA= B.ID_MARCA)";
+            data = "A.ID_PRODUCTO,A.NOMBRE_PRODUCTO,A.DESCRIPCION_PRODUCTO, A.PRECIO_PRODUCTO,B.DESCRIPCION AS MARCA FROM PRODUCTOS A INNER JOIN MARCAS B ON(A.ID_MARCA= B.ID_MARCA)";
             if (search == "" && category == "" && brand == "")
             {
                 products = db.JoinTables(data, "", "A.ID_PRODUCTO");
@@ -96,13 +96,14 @@ namespace CarritoCompra
                 int i;
                 for (i = 0; i < products.Rows.Count; i++)
                 {
-                    string nameProduct, descriptionProduct, priceProduct,brandProduct;
-                    nameProduct = products.Rows[i][0].ToString();
-                    descriptionProduct = products.Rows[i][1].ToString();
-                    priceProduct = products.Rows[i][2].ToString();
-                    brandProduct =products.Rows[i][3].ToString();
+                    string idProduct,nameProduct, descriptionProduct, priceProduct,brandProduct;
+                    idProduct= products.Rows[i][0].ToString();
+                    nameProduct = products.Rows[i][1].ToString();
+                    descriptionProduct = products.Rows[i][2].ToString();
+                    priceProduct = products.Rows[i][3].ToString();
+                    brandProduct =products.Rows[i][4].ToString();
 
-                   DgvProductos.Rows.Add(nameProduct,descriptionProduct,priceProduct,brandProduct);
+                   DgvProductos.Rows.Add(idProduct,nameProduct,descriptionProduct,priceProduct,brandProduct);
                 }
 
                 DgvProductos.DefaultCellStyle.ForeColor = Color.Black;
@@ -145,6 +146,19 @@ namespace CarritoCompra
             {
                 getProducts("", "", CmbBrand.SelectedValue.ToString());
             }
+        }
+
+        private void DgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DgvProductos.Rows.Count > 0)
+            {
+                FrmVerProducto verProducto = new FrmVerProducto();
+
+                FrmVerProducto.idProductoSelected= DgvProductos.CurrentRow.Cells[0].Value.ToString();
+                verProducto.ShowDialog();
+                
+            }
+
         }
     }
 }
