@@ -12,7 +12,7 @@ namespace CarritoCompra
 {
     internal class Connection
     {
-        static string ConnectionString = "Server= OPCODE;Database=PROYECTO_B2_TIENDA;Uid=opcode;Pwd=opcode7;";
+        static string ConnectionString = "Server= OPCODE;Database=PROYECTO_BD2_TIENDA;Uid=opcode;Pwd=opcode7;";
 
         //Variable de conexion a la base de datos
         public static SqlConnection ConSql = new SqlConnection(ConnectionString);

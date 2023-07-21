@@ -169,6 +169,53 @@ namespace CarritoCompra
             }
             return ra;
         }
-        //Fin Metodo Destroy
+        public DataTable JoinTables(string data, string condition = "", string orderby = "")
+        {
+            recordset = new DataTable();
+
+            if (condition == "" && orderby == "")
+            {
+                query = "Select " + data;
+
+            }
+            else if (condition != "" && orderby == "")
+            {
+                query = "Select " + data + " where " + condition;
+
+            }
+            else if (condition != "" && orderby != "")
+            {
+                query = "Select " + data + " where " + condition + " order by " + orderby;
+
+            }
+            else if (condition == "" && orderby != "")
+            {
+                query = "Select " + data + " order by " + orderby;
+            }
+
+            try
+            {
+                com = new SqlCommand(query, Connection.ConSql);
+                Connection.OpenConnection();
+
+                reader = com.ExecuteReader();
+                recordset.Load(reader);
+
+                com.Dispose();
+                reader.Close();
+                Connection.CloseConnection();
+
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+            finally
+            {
+                Connection.EndsConnection();
+            }
+
+            return recordset;
+        }
     }
 }
