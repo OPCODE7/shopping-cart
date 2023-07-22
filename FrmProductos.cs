@@ -50,7 +50,26 @@ namespace CarritoCompra
 
         private void TxtSearcher_TextChanged(object sender, EventArgs e)
         {
-            getProducts(TxtSearcher.Text);
+            if (CmbCategory.Text.Trim().Length!=0 && CmbBrand.Text.Trim().Length == 0)
+            {
+              getProducts(TxtSearcher.Text,CmbCategory.SelectedValue.ToString());
+                MessageBox.Show("sin marca pero con categoria");
+
+            }else if (CmbCategory.Text.Trim().Length == 0 && CmbBrand.Text.Trim().Length != 0)
+            {
+                getProducts(TxtSearcher.Text,"",CmbBrand.SelectedValue.ToString());
+                MessageBox.Show("sin categoria pero con marca");
+            }
+            else if(CmbCategory.Text.Trim().Length != 0 && CmbBrand.Text.Trim().Length != 0)
+            {
+                getProducts(TxtSearcher.Text, CmbCategory.SelectedValue.ToString(),CmbBrand.SelectedValue.ToString());
+                MessageBox.Show("con marca y categoria");
+            }
+            else
+            {
+                getProducts(TxtSearcher.Text);
+                MessageBox.Show("sin marca y sin categoria");
+            }
         }
 
         private void getProducts(string search = "", string category = "", string brand = "")
@@ -65,6 +84,18 @@ namespace CarritoCompra
             else if (search != "" && category == "" && brand == "")
             {
                 string condition = "A.NOMBRE_PRODUCTO LIKE '%" + search + "%'";
+                products = db.JoinTables(data, condition, "A.ID_PRODUCTO");
+
+            }
+            else if (search != "" && category != "" && brand == "")
+            {
+                string condition = "A.NOMBRE_PRODUCTO LIKE '%" + search + "%' AND A.ID_CATEGORIA=" + category + "";
+                products = db.JoinTables(data, condition, "A.ID_PRODUCTO");
+
+            }
+            else if (search != "" && category == "" && brand != "")
+            {
+                string condition = "A.NOMBRE_PRODUCTO LIKE '%" + search + "%' AND A.ID_MARCA= " + brand + "";
                 products = db.JoinTables(data, condition, "A.ID_PRODUCTO");
 
             }
