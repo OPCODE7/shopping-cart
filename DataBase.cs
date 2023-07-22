@@ -87,11 +87,12 @@ namespace CarritoCompra
             }
             catch (SqlException error)
             {
+                MessageBox.Show(query);
                 MessageBox.Show(error.Message);
             }
             finally
             {
-               Connection.EndsConnection();
+                Connection.EndsConnection();
             }
             return ra;
         }
@@ -117,7 +118,6 @@ namespace CarritoCompra
                 Connection.OpenConnection();
 
                 ra = com.ExecuteNonQuery();
-
                 com.Dispose();
                 Connection.CloseConnection();
             }
@@ -151,7 +151,7 @@ namespace CarritoCompra
             try
             {
                 com = new SqlCommand(query, Connection.ConSql);
-               Connection.OpenConnection();
+                Connection.OpenConnection();
 
                 ra = com.ExecuteNonQuery();
 
@@ -165,7 +165,7 @@ namespace CarritoCompra
             }
             finally
             {
-               Connection.EndsConnection();
+                Connection.EndsConnection();
             }
             return ra;
         }
@@ -217,5 +217,6 @@ namespace CarritoCompra
 
             return recordset;
         }
+
     }
 }

@@ -14,6 +14,10 @@ namespace CarritoCompra
     {
         public static string idProductoSelected;
         DataBase db= new DataBase();
+        Helper h = new Helper();
+        FrmProductos productos = new FrmProductos();
+
+
         public FrmVerProducto()
         {
             InitializeComponent();
@@ -52,16 +56,99 @@ namespace CarritoCompra
 
         private void BtnAddToCart_Click(object sender, EventArgs e)
         {
-            FrmProductos productos = new FrmProductos();
-            if (productos.LblShoppingCart.Text=="0")
+            DataTable inventory= new DataTable();
+            int stock= 0;
+
+            inventory = db.Find("INVENTARIO","CANTIDAD","ID_PRODUCTO= '"+idProductoSelected+"'");
+
+
+            if (inventory.Rows.Count>0)
             {
-                //añadir registro a la tabla carrito y seguido de esto a la tabla carrito detalle
+                DataRow rowInventory = inventory.Rows[0];
+                stock = Convert.ToInt32(rowInventory["CANTIDAD"]);
+            }
+
+            if (Convert.ToInt32(TxtCantidad.Text.Trim()) > stock)
+            {
+                h.MsgWarning("No hay suficiente stock del producto");
 
             }
             else
             {
-                //añadir registros solo a la tabla carrito detalle tomando en cuenta que ya se ha generado un carrito de compra asociar estos registros a ese carrito
+                
+
+                if (Cart.numberOfProducts==0)
+                {
+
+
+                    //añadir registro a la tabla carrito y seguido de esto a la tabla carrito detalle
+
+
+                    if (db.Save("CARRITO", "ID_USUARIO", User.IDUSER) > 0)
+                    {
+                        Cart.numberOfProducts++;
+                        productos.LblShoppingCart.Text = Cart.numberOfProducts.ToString();
+                        //h.MsgSuccess("El registro se realizo correctamente");
+                        DataTable cart = new DataTable();
+                        string idCart = "";
+                        cart = db.Find("CARRITO", " TOP 1 ID_CARRITO", "", "ID_CARRITO DESC");
+
+                        if (cart.Rows.Count > 0)
+                        {
+                            DataRow rowCart = cart.Rows[0];
+                            idCart = rowCart["ID_CARRITO"].ToString();
+                            Cart.numberCart = rowCart["ID_CARRITO"].ToString();
+                        }
+
+                        string columns, data;
+                        columns = "ID_CARRITO,ID_PRODUCTO,ID_USUARIO,CANTIDAD";
+                        data = "" + idCart + "," + idProductoSelected + "," + User.IDUSER + "," + TxtCantidad.Text + "";
+
+                        if (db.Save("CARRITO_DETALLE", columns, data) > 0)
+                        {
+                            h.MsgSuccess("Producto agregado al carrito");
+                        }
+
+                    }
+
+                }
+                else
+                {
+
+                   // añadir registros solo a la tabla carrito detalle tomando en cuenta que ya se ha generado un carrito de compra asociar estos registros a ese carrito
+                    DataTable cart = new DataTable();
+                    string idCart = "";
+                    cart = db.Find("CARRITO", " TOP 1 ID_CARRITO", "", "ID_CARRITO DESC");
+
+                    if (cart.Rows.Count > 0)
+                    {
+                        DataRow rowCart = cart.Rows[0];
+                        idCart = rowCart["ID_CARRITO"].ToString();
+                    }
+
+                    string columns, data;
+                    columns = "ID_CARRITO,ID_PRODUCTO,ID_USUARIO,CANTIDAD";
+                    data = "" + idCart + "," + idProductoSelected + "," + User.IDUSER + "," + TxtCantidad.Text + "";
+
+                    if (db.Save("CARRITO_DETALLE", columns, data) > 0)
+                    {
+                        Cart.numberOfProducts++;
+                        productos.LblShoppingCart.Text = Cart.numberOfProducts.ToString();
+                        h.MsgSuccess("Producto agregado al carrito");
+                    }
+
+                }
+                this.Hide();
+                productos.Show();
             }
+
         }
+
+        private void FrmVerProducto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            productos.Show();
+        }
+
+       
     }
 }

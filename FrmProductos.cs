@@ -15,6 +15,7 @@ namespace CarritoCompra
     {
         DataBase db = new DataBase();
         DataTable recordset;
+
         public FrmProductos()
         {
             InitializeComponent();
@@ -116,10 +117,6 @@ namespace CarritoCompra
             products.Dispose();
 
         }
-
-       
-
-      
         
         private void CmbCategory_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -155,10 +152,28 @@ namespace CarritoCompra
                 FrmVerProducto verProducto = new FrmVerProducto();
 
                 FrmVerProducto.idProductoSelected= DgvProductos.CurrentRow.Cells[0].Value.ToString();
+                this.Hide();
                 verProducto.ShowDialog();
+
                 
             }
 
+        }
+
+        private void FrmProductos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PbxGoCart_Click(object sender, EventArgs e)
+        {
+            if (Cart.numberOfProducts>0)
+            {
+                FrmCarrito cart = new FrmCarrito();
+                cart.Show();
+                this.Hide();
+
+            }
         }
     }
 }

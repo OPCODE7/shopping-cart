@@ -45,7 +45,7 @@
             // PbxProductImage
             // 
             this.PbxProductImage.Location = new System.Drawing.Point(26, 50);
-            this.PbxProductImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PbxProductImage.Margin = new System.Windows.Forms.Padding(4);
             this.PbxProductImage.Name = "PbxProductImage";
             this.PbxProductImage.Size = new System.Drawing.Size(273, 300);
             this.PbxProductImage.TabIndex = 0;
@@ -171,10 +171,11 @@
             this.Controls.Add(this.LblNameProduct);
             this.Controls.Add(this.PbxProductImage);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmVerProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle Producto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVerProducto_FormClosing);
             this.Load += new System.EventHandler(this.FrmVerProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbxProductImage)).EndInit();
             this.ResumeLayout(false);

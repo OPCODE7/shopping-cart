@@ -10,3 +10,4 @@ C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\ob
 C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.pdb
 C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.FrmLogin.resources
 C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.FrmVerProducto.resources
+C:\Users\Darlin\OPCODE\UNIVERSIDAD\SEGUNDOTRI_2023\TEORIA_BD_II\CarritoCompra\obj\Debug\CarritoCompra.FrmCarrito.resources

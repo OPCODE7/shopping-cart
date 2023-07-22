@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductos));
             this.DgvProductos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtSearcher = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CmbCategory = new System.Windows.Forms.ComboBox();
-            this.CmbBrand = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LblShoppingCart = new System.Windows.Forms.Label();
             this.ID_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarcaProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detalle = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtSearcher = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CmbCategory = new System.Windows.Forms.ComboBox();
+            this.CmbBrand = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PbxGoCart = new System.Windows.Forms.PictureBox();
+            this.LblShoppingCart = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxGoCart)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvProductos
@@ -67,6 +67,48 @@
             this.DgvProductos.Size = new System.Drawing.Size(983, 462);
             this.DgvProductos.TabIndex = 0;
             this.DgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductos_CellDoubleClick);
+            // 
+            // ID_PRODUCTO
+            // 
+            this.ID_PRODUCTO.HeaderText = "ID";
+            this.ID_PRODUCTO.Name = "ID_PRODUCTO";
+            this.ID_PRODUCTO.ReadOnly = true;
+            this.ID_PRODUCTO.Width = 80;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre Producto";
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            this.NombreProducto.Width = 200;
+            // 
+            // DescripcionProducto
+            // 
+            this.DescripcionProducto.HeaderText = "Descripcion";
+            this.DescripcionProducto.Name = "DescripcionProducto";
+            this.DescripcionProducto.ReadOnly = true;
+            this.DescripcionProducto.Width = 320;
+            // 
+            // PrecioProducto
+            // 
+            this.PrecioProducto.HeaderText = "Precio";
+            this.PrecioProducto.Name = "PrecioProducto";
+            this.PrecioProducto.ReadOnly = true;
+            this.PrecioProducto.Width = 120;
+            // 
+            // MarcaProducto
+            // 
+            this.MarcaProducto.HeaderText = "Marca";
+            this.MarcaProducto.Name = "MarcaProducto";
+            this.MarcaProducto.ReadOnly = true;
+            this.MarcaProducto.Width = 120;
+            // 
+            // Detalle
+            // 
+            this.Detalle.HeaderText = "Ver detalle";
+            this.Detalle.Image = ((System.Drawing.Image)(resources.GetObject("Detalle.Image")));
+            this.Detalle.Name = "Detalle";
+            this.Detalle.ReadOnly = true;
             // 
             // label1
             // 
@@ -127,16 +169,17 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Marca";
             // 
-            // pictureBox1
+            // PbxGoCart
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1003, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.PbxGoCart.Image = ((System.Drawing.Image)(resources.GetObject("PbxGoCart.Image")));
+            this.PbxGoCart.Location = new System.Drawing.Point(1003, 34);
+            this.PbxGoCart.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.PbxGoCart.Name = "PbxGoCart";
+            this.PbxGoCart.Size = new System.Drawing.Size(24, 24);
+            this.PbxGoCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxGoCart.TabIndex = 7;
+            this.PbxGoCart.TabStop = false;
+            this.PbxGoCart.Click += new System.EventHandler(this.PbxGoCart_Click);
             // 
             // LblShoppingCart
             // 
@@ -144,51 +187,8 @@
             this.LblShoppingCart.Location = new System.Drawing.Point(1014, 14);
             this.LblShoppingCart.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblShoppingCart.Name = "LblShoppingCart";
-            this.LblShoppingCart.Size = new System.Drawing.Size(16, 18);
+            this.LblShoppingCart.Size = new System.Drawing.Size(0, 18);
             this.LblShoppingCart.TabIndex = 8;
-            this.LblShoppingCart.Text = "0";
-            // 
-            // ID_PRODUCTO
-            // 
-            this.ID_PRODUCTO.HeaderText = "ID";
-            this.ID_PRODUCTO.Name = "ID_PRODUCTO";
-            this.ID_PRODUCTO.ReadOnly = true;
-            this.ID_PRODUCTO.Width = 80;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 200;
-            // 
-            // DescripcionProducto
-            // 
-            this.DescripcionProducto.HeaderText = "Descripcion";
-            this.DescripcionProducto.Name = "DescripcionProducto";
-            this.DescripcionProducto.ReadOnly = true;
-            this.DescripcionProducto.Width = 320;
-            // 
-            // PrecioProducto
-            // 
-            this.PrecioProducto.HeaderText = "Precio";
-            this.PrecioProducto.Name = "PrecioProducto";
-            this.PrecioProducto.ReadOnly = true;
-            this.PrecioProducto.Width = 120;
-            // 
-            // MarcaProducto
-            // 
-            this.MarcaProducto.HeaderText = "Marca";
-            this.MarcaProducto.Name = "MarcaProducto";
-            this.MarcaProducto.ReadOnly = true;
-            this.MarcaProducto.Width = 120;
-            // 
-            // Detalle
-            // 
-            this.Detalle.HeaderText = "Ver detalle";
-            this.Detalle.Image = ((System.Drawing.Image)(resources.GetObject("Detalle.Image")));
-            this.Detalle.Name = "Detalle";
-            this.Detalle.ReadOnly = true;
             // 
             // FrmProductos
             // 
@@ -196,7 +196,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1041, 601);
             this.Controls.Add(this.LblShoppingCart);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PbxGoCart);
             this.Controls.Add(this.CmbBrand);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CmbCategory);
@@ -209,9 +209,10 @@
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProductos_FormClosing);
             this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxGoCart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,12 +222,11 @@
 
         private System.Windows.Forms.DataGridView DgvProductos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtSearcher;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CmbCategory;
         private System.Windows.Forms.ComboBox CmbBrand;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PbxGoCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionProducto;
@@ -234,5 +234,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MarcaProducto;
         private System.Windows.Forms.DataGridViewImageColumn Detalle;
         public System.Windows.Forms.Label LblShoppingCart;
+        public System.Windows.Forms.TextBox TxtSearcher;
     }
 }
