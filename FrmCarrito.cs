@@ -23,6 +23,7 @@ namespace CarritoCompra
         private void FrmCarrito_Load(object sender, EventArgs e)
         {
             getDetailsCart();
+            this.Text += $"|{User.USERNAME}";
 
         }
 

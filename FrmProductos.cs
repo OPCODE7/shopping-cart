@@ -14,6 +14,7 @@ namespace CarritoCompra
     public partial class FrmProductos : Form
     {
         DataBase db = new DataBase();
+        Helper h = new Helper();
         DataTable recordset;
 
         public FrmProductos()
@@ -26,6 +27,7 @@ namespace CarritoCompra
             getProducts();
             fillCategories();
             fillBrands();
+            this.Text += $"|{User.USERNAME}";
         }
 
         private void fillCategories()
@@ -173,6 +175,10 @@ namespace CarritoCompra
                 cart.Show();
                 this.Hide();
 
+            }
+            else
+            {
+                h.MsgWarning("Carrito vacío");
             }
         }
     }

@@ -47,14 +47,15 @@
             this.PbxProductImage.Location = new System.Drawing.Point(26, 50);
             this.PbxProductImage.Margin = new System.Windows.Forms.Padding(4);
             this.PbxProductImage.Name = "PbxProductImage";
-            this.PbxProductImage.Size = new System.Drawing.Size(273, 300);
+            this.PbxProductImage.Size = new System.Drawing.Size(356, 331);
+            this.PbxProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbxProductImage.TabIndex = 0;
             this.PbxProductImage.TabStop = false;
             // 
             // LblNameProduct
             // 
             this.LblNameProduct.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNameProduct.Location = new System.Drawing.Point(320, 50);
+            this.LblNameProduct.Location = new System.Drawing.Point(390, 55);
             this.LblNameProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNameProduct.Name = "LblNameProduct";
             this.LblNameProduct.Size = new System.Drawing.Size(225, 49);
@@ -64,10 +65,10 @@
             // LblDescriptionProduct
             // 
             this.LblDescriptionProduct.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDescriptionProduct.Location = new System.Drawing.Point(323, 127);
+            this.LblDescriptionProduct.Location = new System.Drawing.Point(393, 132);
             this.LblDescriptionProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDescriptionProduct.Name = "LblDescriptionProduct";
-            this.LblDescriptionProduct.Size = new System.Drawing.Size(185, 74);
+            this.LblDescriptionProduct.Size = new System.Drawing.Size(301, 82);
             this.LblDescriptionProduct.TabIndex = 1;
             this.LblDescriptionProduct.Text = "Box PCs DDR3L 2x SODIMM Socket 16GB";
             // 
@@ -75,7 +76,7 @@
             // 
             this.LblPrice.AutoSize = true;
             this.LblPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPrice.Location = new System.Drawing.Point(323, 99);
+            this.LblPrice.Location = new System.Drawing.Point(393, 104);
             this.LblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPrice.Name = "LblPrice";
             this.LblPrice.Size = new System.Drawing.Size(60, 19);
@@ -86,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(321, 201);
+            this.label1.Location = new System.Drawing.Point(392, 237);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 16);
@@ -97,7 +98,7 @@
             // 
             this.LblBrand.AutoSize = true;
             this.LblBrand.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBrand.Location = new System.Drawing.Point(377, 201);
+            this.LblBrand.Location = new System.Drawing.Point(448, 237);
             this.LblBrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblBrand.Name = "LblBrand";
             this.LblBrand.Size = new System.Drawing.Size(33, 16);
@@ -108,7 +109,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(321, 238);
+            this.label2.Location = new System.Drawing.Point(392, 274);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
@@ -119,7 +120,7 @@
             // 
             this.LblModel.AutoSize = true;
             this.LblModel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblModel.Location = new System.Drawing.Point(377, 238);
+            this.LblModel.Location = new System.Drawing.Point(448, 274);
             this.LblModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblModel.Name = "LblModel";
             this.LblModel.Size = new System.Drawing.Size(54, 16);
@@ -128,7 +129,7 @@
             // 
             // BtnAddToCart
             // 
-            this.BtnAddToCart.Location = new System.Drawing.Point(324, 317);
+            this.BtnAddToCart.Location = new System.Drawing.Point(395, 353);
             this.BtnAddToCart.Name = "BtnAddToCart";
             this.BtnAddToCart.Size = new System.Drawing.Size(133, 33);
             this.BtnAddToCart.TabIndex = 5;
@@ -138,7 +139,7 @@
             // 
             // TxtCantidad
             // 
-            this.TxtCantidad.Location = new System.Drawing.Point(389, 275);
+            this.TxtCantidad.Location = new System.Drawing.Point(460, 311);
             this.TxtCantidad.Name = "TxtCantidad";
             this.TxtCantidad.Size = new System.Drawing.Size(68, 22);
             this.TxtCantidad.TabIndex = 6;
@@ -147,7 +148,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(321, 278);
+            this.label4.Location = new System.Drawing.Point(392, 314);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 16);
@@ -158,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 383);
+            this.ClientSize = new System.Drawing.Size(707, 437);
             this.Controls.Add(this.TxtCantidad);
             this.Controls.Add(this.BtnAddToCart);
             this.Controls.Add(this.LblModel);

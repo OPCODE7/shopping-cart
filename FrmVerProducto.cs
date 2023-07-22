@@ -27,6 +27,7 @@ namespace CarritoCompra
         private void FrmVerProducto_Load(object sender, EventArgs e)
         {
             getProducto();
+            this.Text += $"|{User.USERNAME}";
 
         }
 
@@ -34,13 +35,20 @@ namespace CarritoCompra
         private void getProducto()
         {
             DataTable product = new DataTable();
-            string data = "A.NOMBRE_PRODUCTO,A.DESCRIPCION_PRODUCTO,A.PRECIO_PRODUCTO,B.DESCRIPCION AS MARCA, C.DESCRIPCION AS MODELO FROM PRODUCTOS A INNER JOIN MARCAS B ON(A.ID_MARCA = B.ID_MARCA) INNER JOIN MODELO C ON(A.ID_MODELO = C.ID_MODELO)";
+            string pathApp= Application.StartupPath.ToString();
+            string pathImages = pathApp.Substring(0, pathApp.Length - 9);
 
-            product = db.JoinTables(data,"ID_PRODUCTO= '" + idProductoSelected + "'");
+
+
+
+            string data = "A.NOMBRE_PRODUCTO,A.DESCRIPCION_PRODUCTO,A.PRECIO_PRODUCTO,B.DESCRIPCION AS MARCA,D.URL_IMAGEN, C.DESCRIPCION AS MODELO FROM PRODUCTOS A INNER JOIN MARCAS B ON(A.ID_MARCA = B.ID_MARCA) INNER JOIN MODELO C ON(A.ID_MODELO = C.ID_MODELO) INNER JOIN PRODUCTO_IMAGENES D ON (A.ID_PRODUCTO=D.ID_PRODUCTO)";
+
+            product = db.JoinTables(data,"A.ID_PRODUCTO= '" + idProductoSelected + "'");
 
             if (product.Rows.Count > 0)
             {
                 DataRow rowedit = product.Rows[0];
+                PbxProductImage.Image = Image.FromFile(pathImages + rowedit["URL_IMAGEN"].ToString());
                 LblNameProduct.Text = rowedit["NOMBRE_PRODUCTO"].ToString();
                 LblPrice.Text = rowedit["PRECIO_PRODUCTO"].ToString() + "USD";
                 LblDescriptionProduct.Text= rowedit["DESCRIPCION_PRODUCTO"].ToString();

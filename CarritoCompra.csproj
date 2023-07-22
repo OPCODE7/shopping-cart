@@ -113,6 +113,12 @@
   <ItemGroup>
     <Content Include="Assets\cart.png" />
     <Content Include="Assets\eye.png" />
+    <Content Include="Assets\ImagesProducts\hp.jpg" />
+    <Content Include="Assets\ImagesProducts\hp2.jpg" />
+    <Content Include="Assets\ImagesProducts\laptop-dell.jpg" />
+    <Content Include="Assets\ImagesProducts\mackbook-pro.jpg" />
+    <Content Include="Assets\ImagesProducts\mouse-gaming-logitech.jpg" />
+    <Content Include="Assets\ImagesProducts\predatorx32.jpg" />
     <Content Include="Assets\trash-24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
