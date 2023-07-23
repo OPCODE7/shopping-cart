@@ -53,22 +53,18 @@ namespace CarritoCompra
             if (CmbCategory.Text.Trim().Length!=0 && CmbBrand.Text.Trim().Length == 0)
             {
               getProducts(TxtSearcher.Text,CmbCategory.SelectedValue.ToString());
-                MessageBox.Show("sin marca pero con categoria");
 
             }else if (CmbCategory.Text.Trim().Length == 0 && CmbBrand.Text.Trim().Length != 0)
             {
                 getProducts(TxtSearcher.Text,"",CmbBrand.SelectedValue.ToString());
-                MessageBox.Show("sin categoria pero con marca");
             }
             else if(CmbCategory.Text.Trim().Length != 0 && CmbBrand.Text.Trim().Length != 0)
             {
                 getProducts(TxtSearcher.Text, CmbCategory.SelectedValue.ToString(),CmbBrand.SelectedValue.ToString());
-                MessageBox.Show("con marca y categoria");
             }
             else
             {
                 getProducts(TxtSearcher.Text);
-                MessageBox.Show("sin marca y sin categoria");
             }
         }
 

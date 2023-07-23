@@ -87,5 +87,13 @@ namespace CarritoCompra
             }
 
         }
+
+        private void TxtPwd_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                BtnLogin.PerformClick();
+            }
+        }
     }
 }

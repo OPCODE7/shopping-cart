@@ -165,6 +165,12 @@ namespace CarritoCompra
             productos.Show();
         }
 
-       
+        private void TxtCantidad_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnAddToCart.PerformClick();
+            }
+        }
     }
 }

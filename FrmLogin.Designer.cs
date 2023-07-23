@@ -38,7 +38,7 @@
             // BtnLogin
             // 
             this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.Location = new System.Drawing.Point(136, 193);
+            this.BtnLogin.Location = new System.Drawing.Point(135, 205);
             this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(113, 40);
@@ -51,7 +51,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 37);
+            this.label1.Location = new System.Drawing.Point(92, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 1;
@@ -60,7 +60,7 @@
             // TxtUserName
             // 
             this.TxtUserName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUserName.Location = new System.Drawing.Point(96, 64);
+            this.TxtUserName.Location = new System.Drawing.Point(95, 76);
             this.TxtUserName.Name = "TxtUserName";
             this.TxtUserName.Size = new System.Drawing.Size(208, 22);
             this.TxtUserName.TabIndex = 2;
@@ -68,16 +68,17 @@
             // TxtPwd
             // 
             this.TxtPwd.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPwd.Location = new System.Drawing.Point(96, 132);
+            this.TxtPwd.Location = new System.Drawing.Point(95, 144);
             this.TxtPwd.Name = "TxtPwd";
             this.TxtPwd.Size = new System.Drawing.Size(208, 22);
             this.TxtPwd.TabIndex = 4;
+            this.TxtPwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtPwd_KeyUp);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(93, 105);
+            this.label2.Location = new System.Drawing.Point(92, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 16);
             this.label2.TabIndex = 3;
@@ -95,6 +96,7 @@
             this.Controls.Add(this.BtnLogin);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";

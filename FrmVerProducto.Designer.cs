@@ -143,6 +143,7 @@
             this.TxtCantidad.Name = "TxtCantidad";
             this.TxtCantidad.Size = new System.Drawing.Size(68, 22);
             this.TxtCantidad.TabIndex = 6;
+            this.TxtCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtCantidad_KeyUp);
             // 
             // label4
             // 
@@ -157,8 +158,8 @@
             // 
             // FrmVerProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(707, 437);
             this.Controls.Add(this.TxtCantidad);
             this.Controls.Add(this.BtnAddToCart);
@@ -173,6 +174,7 @@
             this.Controls.Add(this.PbxProductImage);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmVerProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle Producto";

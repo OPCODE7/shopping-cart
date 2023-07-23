@@ -192,8 +192,8 @@
             // 
             // FrmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1041, 601);
             this.Controls.Add(this.LblShoppingCart);
             this.Controls.Add(this.PbxGoCart);
@@ -206,6 +206,7 @@
             this.Controls.Add(this.DgvProductos);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
