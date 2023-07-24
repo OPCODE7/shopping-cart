@@ -63,7 +63,7 @@
             this.TxtUserName.Location = new System.Drawing.Point(95, 76);
             this.TxtUserName.Name = "TxtUserName";
             this.TxtUserName.Size = new System.Drawing.Size(208, 22);
-            this.TxtUserName.TabIndex = 2;
+            this.TxtUserName.TabIndex = 0;
             // 
             // TxtPwd
             // 

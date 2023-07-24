@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCarrito));
             this.DgvCart = new System.Windows.Forms.DataGridView();
-            this.LblTotal = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BtnBackToFrmProducts = new System.Windows.Forms.Button();
             this.ID_CARRITO_DETALLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COD_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +38,9 @@
             this.DESCUENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
+            this.LblTotal = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnBackToFrmProducts = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,36 +68,6 @@
             this.DgvCart.TabIndex = 0;
             this.DgvCart.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCart_CellClick);
             this.DgvCart.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCart_CellValueChanged);
-            // 
-            // LblTotal
-            // 
-            this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(956, 338);
-            this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(14, 16);
-            this.LblTotal.TabIndex = 1;
-            this.LblTotal.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(848, 338);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Total a pagar:";
-            // 
-            // BtnBackToFrmProducts
-            // 
-            this.BtnBackToFrmProducts.Location = new System.Drawing.Point(31, 331);
-            this.BtnBackToFrmProducts.Name = "BtnBackToFrmProducts";
-            this.BtnBackToFrmProducts.Size = new System.Drawing.Size(150, 23);
-            this.BtnBackToFrmProducts.TabIndex = 2;
-            this.BtnBackToFrmProducts.Text = "Volver a productos";
-            this.BtnBackToFrmProducts.UseVisualStyleBackColor = true;
-            this.BtnBackToFrmProducts.Click += new System.EventHandler(this.BtnBackToFrmProducts_Click);
             // 
             // ID_CARRITO_DETALLE
             // 
@@ -150,6 +120,36 @@
             this.ELIMINAR.Name = "ELIMINAR";
             this.ELIMINAR.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ELIMINAR.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // LblTotal
+            // 
+            this.LblTotal.AutoSize = true;
+            this.LblTotal.Location = new System.Drawing.Point(956, 338);
+            this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTotal.Name = "LblTotal";
+            this.LblTotal.Size = new System.Drawing.Size(14, 16);
+            this.LblTotal.TabIndex = 1;
+            this.LblTotal.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(848, 338);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Total a pagar:";
+            // 
+            // BtnBackToFrmProducts
+            // 
+            this.BtnBackToFrmProducts.Location = new System.Drawing.Point(31, 331);
+            this.BtnBackToFrmProducts.Name = "BtnBackToFrmProducts";
+            this.BtnBackToFrmProducts.Size = new System.Drawing.Size(150, 23);
+            this.BtnBackToFrmProducts.TabIndex = 2;
+            this.BtnBackToFrmProducts.Text = "Volver a productos";
+            this.BtnBackToFrmProducts.UseVisualStyleBackColor = true;
+            this.BtnBackToFrmProducts.Click += new System.EventHandler(this.BtnBackToFrmProducts_Click);
             // 
             // FrmCarrito
             // 

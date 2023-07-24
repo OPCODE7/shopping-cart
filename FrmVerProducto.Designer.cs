@@ -142,7 +142,7 @@
             this.TxtCantidad.Location = new System.Drawing.Point(460, 311);
             this.TxtCantidad.Name = "TxtCantidad";
             this.TxtCantidad.Size = new System.Drawing.Size(68, 22);
-            this.TxtCantidad.TabIndex = 6;
+            this.TxtCantidad.TabIndex = 0;
             this.TxtCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtCantidad_KeyUp);
             // 
             // label4

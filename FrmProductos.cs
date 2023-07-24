@@ -208,5 +208,31 @@ namespace CarritoCompra
                 h.MsgWarning("Carrito vacío");
             }
         }
+
+        private void CmbCategory_TextChanged(object sender, EventArgs e)
+        {
+            if (CmbCategory.Text.Trim().Length == 0 && CmbBrand.Text.Trim().Length==0)
+            {
+                getProducts();
+            }else if (CmbCategory.Text.Trim().Length==0 && CmbBrand.Text.Trim().Length!=0)
+            {
+                getProducts("","",CmbBrand.SelectedValue.ToString());
+
+            }
+        }
+
+        private void CmbBrand_TextChanged(object sender, EventArgs e)
+        {
+            if (CmbCategory.Text.Trim().Length == 0 && CmbBrand.Text.Trim().Length == 0)
+            {
+                getProducts();
+            }
+            else if (CmbCategory.Text.Trim().Length != 0 && CmbBrand.Text.Trim().Length == 0)
+            {
+                getProducts("", CmbCategory.SelectedValue.ToString(), "");
+
+            }
+
+        }
     }
 }

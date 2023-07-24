@@ -148,6 +148,7 @@
             this.CmbCategory.Size = new System.Drawing.Size(264, 26);
             this.CmbCategory.TabIndex = 4;
             this.CmbCategory.SelectionChangeCommitted += new System.EventHandler(this.CmbCategory_SelectionChangeCommitted);
+            this.CmbCategory.TextChanged += new System.EventHandler(this.CmbCategory_TextChanged);
             // 
             // CmbBrand
             // 
@@ -158,6 +159,7 @@
             this.CmbBrand.Size = new System.Drawing.Size(221, 26);
             this.CmbBrand.TabIndex = 6;
             this.CmbBrand.SelectionChangeCommitted += new System.EventHandler(this.CmbBrand_SelectionChangeCommitted);
+            this.CmbBrand.TextChanged += new System.EventHandler(this.CmbBrand_TextChanged);
             // 
             // label3
             // 

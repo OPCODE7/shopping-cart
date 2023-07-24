@@ -157,11 +157,12 @@ namespace CarritoCompra
                             if (Convert.ToInt32(amount) > stock)
                             {
                                 h.MsgWarning("No hay suficiente stock del producto");
+                                getDetailsCart();
                             }
                             else
                             {
                                 string values = "CANTIDAD= '" +amount +"'";
-                                string idDetailCart = DgvCart.CurrentRow.Cells[0].Value.ToString();
+                                string idDetailCart = DgvCart.CurrentRow.Cells  [0].Value.ToString();
                                 if (db.Update("CARRITO_DETALLE", values, "ID_CARRITO_DETALLE= '" + idDetailCart + "'") > 0)
                                 {
                                     getDetailsCart();
@@ -172,7 +173,7 @@ namespace CarritoCompra
                         else
                         {
                             h.MsgWarning("Ingresar cantidad en formato correcto");
-
+                            getDetailsCart();
                         }
                     }
                 }
@@ -180,5 +181,8 @@ namespace CarritoCompra
             }
 
         }
+
+
+        
     }
 }
